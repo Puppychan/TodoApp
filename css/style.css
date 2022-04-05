@@ -1,0 +1,265 @@
+:root {
+    --bright-blue: hsl(220, 98%, 61%);
+    --gradient-color: linear-gradient(45deg, hsl(192, 100%, 67%),  hsl(280, 87%, 65%));
+
+    /* light theme */
+    --very-light-gray: hsl(0, 0%, 98%);
+    --very-light-grayish-blue: hsl(236, 33%, 92%);
+    --light-grayish-blue: hsl(233, 11%, 84%);
+    --dark-grayish-blue: hsl(236, 9%, 61%);
+    --very-dark-grayish-blue: hsl(235, 19%, 35%);
+
+    --background: url("../assets/images/bg-desktop-light.jpg");
+}
+html[data-theme="dark"] {
+    /* --very-dark-blue: hsl(235, 21%, 11%); */
+    --very-light-grayish-blue: hsl(235, 21%, 11%);
+    --very-light-gray: hsl(235, 24%, 19%);
+    --very-dark-grayish-blue: hsl(234, 39%, 85%);
+    --light-grayish-blue-hover: hsl(236, 33%, 92%);
+    --dark-grayish-blue: hsl(234, 11%, 52%);
+    /* --very-dark-grayish-blue: hsl(233, 14%, 35%); */
+    --light-grayish-blue: hsl(237, 14%, 26%);
+    
+    --background: url("../assets/images/bg-desktop-dark.jpg");
+}
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 62.5%;
+}
+
+/* general */
+/* placeholder */
+::-webkit-input-placeholder {
+    color: var(--dark-grayish-blue);
+}
+
+::-moz-placeholder {
+    color: var(--dark-grayish-blue);
+}
+
+::-ms-placeholder {
+    color: var(--dark-grayish-blue);
+}
+
+::placeholder {
+    color: var(--dark-grayish-blue);
+}
+/* placeholder */
+.flex {
+    display: flex;
+    gap: var(--gap, 0px);
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-center-leftside {
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-center-rightside {
+    justify-content: flex-end;
+    align-items: center;
+}
+.flex-center-spacebtw {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-display-wrapper {
+    width: 100%;
+    height: 6.4rem;
+    background-color: var(--very-light-gray);
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1.8rem;
+
+}
+.circle {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    background-color: var(--very-light-gray);   
+    border: 2px var(--light-grayish-blue) solid;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+.text-display {
+    font-size: 2.2rem;
+    color: var(--very-dark-grayish-blue);
+    padding: 1.8rem 0;
+}
+.circle:hover {
+    cursor: pointer;
+
+    /* make border gradient */
+    border-color: transparent;
+    background-image: linear-gradient(var(--very-light-gray), var(--very-light-gray)), var(--gradient-color);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.circle-click,
+.circle-click:hover {
+    cursor: pointer;
+
+    /* change background color after clipped */
+    border-color: transparent;
+    background-image: var(--gradient-color);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+}
+.circle-click-check {
+    width: 1.7rem;
+    height: 1.7rem;
+    object-fit: cover;
+    /* display: none; */
+}
+.hide {
+    /* visibility: hidden; */
+    display: none;
+}
+/* general */
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--very-light-grayish-blue) var(--background) top center / 100% 60% no-repeat;
+
+}
+
+
+/* Start container */
+.container {
+    width: 40%;
+    /* background-color: var(--very-dark-grayish-blue); */
+    flex-direction: column;
+    --gap: 5em;
+}
+/* header */
+header h1 {
+    flex-grow: 1;
+    font-size: 5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    color: white;
+}
+header img {
+    width: 30%;
+    max-width: 3.2rem;
+    height: 2.7em;
+}
+#change-theme {
+    cursor: pointer;
+}
+/* header */
+
+/* start of main */
+main {
+    flex-direction: column;
+}
+/* start of main create */
+.main-create {
+    border-radius: 9px;
+}
+.main-create-input {
+    height: 100%;
+    flex-grow: 1;
+    caret-color: var(--bright-blue);
+    border: none;
+    background-color: var(--very-light-gray)
+    /* font-size: 2rem; */
+}
+
+.main-create-input:focus {
+    outline: none;
+}
+/* end of main create */
+
+/* start of main list */
+.main-list {
+    width: 100%;
+    border-radius: 9px;
+    overflow: hidden;
+    background-color: var(--very-light-gray);
+    box-shadow: 7px 12px 33px 1px rgba(0,0,0,0.26);
+    -webkit-box-shadow: 7px 12px 33px 1px rgba(0,0,0,0.26);
+    -moz-box-shadow: 7px 12px 33px 1px rgba(0,0,0,0.26);
+}
+/* content */
+.main-list-content {
+    height: 20em;
+    overflow: scroll;
+    
+}
+#main-list-container-cutegif {
+    width: 100%;
+    height: 15em;
+    object-fit: contain;
+    /* box-shadow: 7px 10px 47px 15px rgba(255,214,214,1);
+    -webkit-box-shadow: 7px 10px 47px 15px rgba(255,214,214,1);
+    -moz-box-shadow: 7px 10px 47px 15px rgba(255,214,214,1); */
+}
+.main-list-content-task {
+    border-top: 1px var(--light-grayish-blue) solid;
+    border-bottom: 1px var(--light-grayish-blue) solid;
+}
+.main-list-content-task-text {
+    flex-grow: 1;
+}
+.main-list-content-task-cross {
+    width: 1.7em;
+    display: none;
+}
+.main-list-content-task:hover .main-list-content-task-cross {
+    display: block;
+    cursor: pointer;
+}
+.done-text {
+    font-style: italic;
+    text-decoration: line-through;
+    color: var(--light-grayish-blue);
+    font-weight: 400;
+}
+/* content footer */
+.main-list-footer {
+    width: 100%;
+    min-height: 5em;
+    font-size: 1.3rem;
+    color: var(--dark-grayish-blue);
+    padding: 0.7em;
+}
+.main-list-footer-click,
+.main-list-footer-clear:hover,
+[class^="main-list-footer-display-"]:hover {
+    cursor: pointer;
+    color: var(--very-dark-grayish-blue);
+}
+.main-list-footer-display-all {
+    color: var(--bright-blue);
+}
+.main-list-footer-display-all.main-list-footer-click,
+.main-list-footer-display-all:hover {
+    background-image: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* end of main list */
+/* end of main */

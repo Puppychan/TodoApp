@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- link css -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- link font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body class="flex flex-center">
+  <div class="container flex">
+    <!-- start header -->
+    <header class="flex flex-center-spacebtw">
+      <h1 class="flex flex-center-leftside">ToDo</h1>
+      <img id="change-theme" src="./assets/images/icon-moon.svg" alt="Moon Icon">
+    </header>
+    <!-- end header -->
+
+
+    <main class="flex flex-center">
+      <!-- create content -->
+      <div class="main-create text-display-wrapper">
+        <div class="circle">
+          <img class="circle-click-check hide" src="./assets/images/icon-check.svg" alt="Check Icon"/>
+        </div>
+        <input type="text" class="main-create-input text-display" placeholder="Create a new todo...">
+      </div>
+
+      <!-- list -->
+      <div class="main-list">
+        <!-- container -->
+        <div id="main-list-container" class="main-list-content">
+          <img id="main-list-container-cutegif" src="./assets/images/animation-gif.gif" alt="Cute Gif">
+
+        </div>
+
+        <!-- footer -->
+        <div class="main-list-footer flex flex-center-spacebtw">
+          <p class="main-list-footer-count">5 items left</p>
+          <div class="main-list-footer-display flex flex-center-spacebtw">
+            <p class="main-list-footer-display-all">All</p>
+            <p  class="main-list-footer-display-active">Active</p>
+            <div class="main-list-footer-display-completed">Completed</div>
+          </div>
+          <p class="main-list-footer-clear">Clear Completed</p>
+        </div>
+        
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+  <!-- Todo
+  
+  items left
+
+  All
+  Active 
+  Completed
+
+  Clear Completed
+
+  Drag and drop to reorder list -->
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="./scripts/script.js"></script>
+</body>
+</html>
